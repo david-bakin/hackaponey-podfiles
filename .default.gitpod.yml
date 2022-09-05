@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: echo 'init script' # runs during prebuild
-    command: echo 'start script'
+    command: apt install curl apt-transport-https ca-certificates --yes && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
